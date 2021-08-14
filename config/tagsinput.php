@@ -9,7 +9,7 @@ return [
   'addbuttonclass' =>  'btn btn-primary',
   'buttonlabelclass' => 'fas fa-plus-circle',
   'taglistclass' => 'taglist',
-  'tagclass' => 'badge-primary',
+  'tagclass' => 'bg-primary',
   'tagremovebtnclass' => 'fas fa-trash-alt',
   'helptextclass' => 'taginputhelper',
   'helptext' => '#tagsinput::messages.tagshelp#',
@@ -18,6 +18,7 @@ return [
   'tagaddcallback' => null,
   'tagremovecallback' => null,
   'taglabelelement' => 'taglabel',
+  'tagclasselement' => 'tagclass',
   'field' => 'id', // null or data value
   'checkunicity' => true,
 ];

@@ -88,6 +88,7 @@ class Tagsinput{
     $str .= '     field : \'' . $this->options_tags['field'] . '\',' . PHP_EOL;
     $str .= '     tagclass : \'' . $this->options_tags['tagclass'] . '\',' . PHP_EOL;
     $str .= '     taglabelelement : \'' . $this->options_tags['taglabelelement'] . '\',' . PHP_EOL;
+    $str .= '     tagclasselement : \'' . $this->options_tags['tagclasselement'] . '\',' . PHP_EOL;
     $str .= '     tagremovebtnclass : \'' . $this->options_tags['tagremovebtnclass'] . '\',' . PHP_EOL;
     $str .= '     tagaddcallback: ' . $this->options_tags['tagaddcallback'] . ',' . PHP_EOL;
     $str .= '     tagremovecallback: ' . $this->options_tags['tagremovecallback'] . PHP_EOL;
