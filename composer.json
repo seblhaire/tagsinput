@@ -28,5 +28,6 @@
           "aliases": {
               "TagsinputHelper": "Seblhaire\\Tagsinput\\TagsinputHelper"
           }
+        }
     }
 }
