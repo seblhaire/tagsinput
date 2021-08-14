@@ -1,0 +1,32 @@
+{
+    "name": "seblhaire/tagsinput",
+    "description": "A Laravel library with jQuery add on to add tags input field with auto-completer.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Sébastien L'haire",
+            "email": "sebastien@lhaire.org"
+        }
+    ],
+    "homepage": "https://github.com/seblhaire/tagsinput",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.6",
+        "illuminate/http": "^6.0|^7.0|^8.0",
+        "seblhaire/autocompleter": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Seblhaire\\Tagsinput\\": "src/"
+        }
+    },
+    "extra": {
+      "laravel": {
+          "providers": [
+              "Seblhaire\\Tagsinput\TagsinputServiceProvider"
+          ],
+          "aliases": {
+              "TagsinputHelper": "Seblhaire\\Tagsinput\\TagsinputHelper"
+          }
+    }
+}
