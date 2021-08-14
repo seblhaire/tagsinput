@@ -8,7 +8,7 @@ A Laravel library with jQuery add on to add tags input field with auto-completer
 It uses:
 
 * a Javascript auto-complete script based on [jQuery](https://jquery.com/) Javascript framework.
-* [Bootstrap](https://getbootstrap.com/) 4 CSS Framework.
+* [Bootstrap](https://getbootstrap.com/) 5 CSS Framework.
 * package [seblhaire/autocompleter](https://github.com/seblhaire/autocompleter)
 
 ![Taginput](tagsinput.png)
