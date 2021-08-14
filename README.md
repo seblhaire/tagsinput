@@ -101,7 +101,7 @@ Inits a tagsinput object and an autocompleter object that can be passed to the v
     * `'addbuttonclass'`:   class for  `<button>`.  Default: ` 'btn btn-primary'`.
      * `'buttonlabelclass'`:  class for  `<button>`label. Default: `'fas fa-plus-circle'`.
     * `'taglistclass'`: class for `<ul>` tag containing tag list.  Default: `'taglist'`.
-	 * `'tagclass'`: class for tag. Default:  `'badge-primary'`.
+	 * `'tagclass'`: class for tag. Default:  `'bg-primary'`.
     * ` 'tagremovebtnclass'`: class for `<i>` tag containing tag remove button. Default: `'fas fa-trash-alt'`.
    * ` 'helptextclass'`: class for `<p>` tag containing help text. Default: `'taginputhelper'`.
   `'helptext'`  text to be displayed for help. Text can be string or translation key.  Cf [below](#translation_keys).
@@ -110,6 +110,7 @@ Inits a tagsinput object and an autocompleter object that can be passed to the v
     * `'tagaddcallback'`:  name of function which must be triggered when a new tag is added. Default: `null`.
    * `'tagremovecallback'`: name of function which must be triggered when a tag is removed. Default: `null`.
     * `'taglabelelement'`:  name of field in autocompleter result line containing text to display in tag. Default: `'taglabel'`. See [seblhaire/autocompleter](https://github.com/seblhaire/autocompleter).
+    * `tagclasselement`: name of field in autocompleter results line that can be used to set a special tag class that is not the class by default. Default: `tagclass`.
    * `'field'`: name of field in result line containing data identifier or key. Default: `'id'.` See [seblhaire/autocompleter](https://github.com/seblhaire/autocompleter).
     * `'checkunicity'`: specify if value in tag list must be unique. If true, if same tag is selected twice, the second one is ignored and is not added to list. Default: `true`.
 

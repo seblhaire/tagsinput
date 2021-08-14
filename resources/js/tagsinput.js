@@ -32,19 +32,22 @@ var Tagsinput = {
       }
       jQuery(this).css('background-color','');
       if (jQuery(this).index() < self.dragindex){
-        jQuery('<li/>')
+        var li = jQuery('<li/>')
           .attr('draggable', true)
           .on(self.tagevents, {self : self})
           .append(self.dragtag)
           .insertBefore(jQuery(this));
       }else{
-        jQuery('<li/>')
+        var li = jQuery('<li/>')
           .attr('draggable', true)
           .on(self.tagevents, {self : self})
           .append(self.dragtag)
           .insertAfter(jQuery(this));
       }
       self.dragelement.remove();
+      if (self.options.tagaddcallback != null){
+        eval(self.options.tagaddcallback(self.dragtag, self));
+      }
     },
     // fin du drag (même sans drop)
     dragend: function() {
@@ -94,8 +97,9 @@ var Tagsinput = {
       .append(
         jQuery('<i></i>').addClass(this.options.tagremovebtnclass)
     )
+    tagclass = data[this.options.tagclasselement] !== undefined ? data[this.options.tagclasselement] : this.options.tagclass;
     var tag = jQuery('<span></span>')
-      .addClass('badge ' + this.options.tagclass)
+      .addClass('badge ' + tagclass)
       .data('tagdata', data)
       .html(data[this.options.taglabelelement])
       .append(removelink);
