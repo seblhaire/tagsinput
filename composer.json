@@ -23,7 +23,7 @@
     "extra": {
       "laravel": {
           "providers": [
-              "Seblhaire\\Tagsinput\TagsinputServiceProvider"
+              "Seblhaire\\Tagsinput\\TagsinputServiceProvider"
           ],
           "aliases": {
               "TagsinputHelper": "Seblhaire\\Tagsinput\\TagsinputHelper"
