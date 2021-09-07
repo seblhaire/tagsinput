@@ -3,7 +3,7 @@
 
 [By Sébastien L'haire](http://sebastien.lhaire.org)
 
-A Laravel library with jQuery add on to add tags input field with auto-completer.
+A Laravel library with jQuery add-on to add tags (Boostrap badges) selected by an auto-completer.
 
 It uses:
 
