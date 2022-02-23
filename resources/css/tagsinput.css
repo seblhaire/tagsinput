@@ -1,0 +1,29 @@
+.taglist {
+    display: flex;
+    padding-left: 0px;
+    list-style: none;
+}
+.taglist li{
+  margin-left:4px;
+  cursor: move;
+}
+.taglist li:first{
+  margin-left:0px;
+}
+.taglist .badge{
+  font-size:100%;
+  padding: 0.75em 0.6em;
+}
+.badge a{
+  margin-left:.3em;
+  color:white;
+}
+.taginputhelper{
+  margin-left: 14px;
+}
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
