@@ -33,7 +33,6 @@ class Tagsinput{
     $str .= $this->printAutocompleter();
     $str .= $this->printTagList();
     $str .= $this->printHelpText();
-
     $str .= '</div>' . PHP_EOL . '<script type="text/javascript">' . PHP_EOL;
     $str .= $this->printAcCallback();
     $str .= ' jQuery(document).ready(function() {' . PHP_EOL;
