@@ -107,8 +107,13 @@ Inits a tagsinput object and an autocompleter object that can be passed to the v
   `'helptext'`  text to be displayed for help. Text can be string or translation key.  Cf [below](#translation_keys).
     * `'showaddbutton'` : toggles display of add element button. Default: `true`.
     * `'addbuttoncallback'`: name of function which must be triggered when clicking to add new element. Eg: this callback should display a form to add information. Default:  `null`.
-    * `'tagaddcallback'`:  name of function which must be triggered when a new tag is added. Default: `null`.
-   * `'tagremovecallback'`: name of function which must be triggered when a tag is removed. Default: `null`.
+    * `'tagaddcallback'`:  name of function which must be triggered when a new tag is added. Default: `null`. Example function:
+    `var showlist = function(tag, data, object){...}`
+    where:
+      * `tag` is object for `<span>` element;
+      * `data` is data attached to the tag (data return by Autocompleter);
+      * `object` is the taginput JavaScript object.
+   * `'tagremovecallback'`: name of function which must be triggered when a tag is removed. Default: `null`. Function parameters are like `tagaddcallback`.
     * `'taglabelelement'`:  name of field in autocompleter result line containing text to display in tag. Default: `'taglabel'`. See [seblhaire/autocompleter](https://github.com/seblhaire/autocompleter).
     * `tagclasselement`: name of field in autocompleter results line that can be used to set a special tag class that is not the class by default. Default: `tagclass`.
    * `'field'`: name of field in result line containing data identifier or key. Default: `'id'.` See [seblhaire/autocompleter](https://github.com/seblhaire/autocompleter).

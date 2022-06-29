@@ -49,7 +49,7 @@ var Tagsinput = {
       }
       self.dragelement.remove();
       if (self.options.tagaddcallback != null){
-        eval(self.options.tagaddcallback(self.dragtag, self));
+        self.options.tagaddcallback(self.dragtag, self);
       }
     },
     // fin du drag (même sans drop)
@@ -111,18 +111,17 @@ var Tagsinput = {
       .data('tagdata', data)
       .html(data[this.options.taglabelelement])
       .append(removelink);
-    removelink.on('click', {li: li, self: this, tag: tag}, function(e){
+    removelink.on('click', {li: li, data: data, self: this, tag: tag}, function(e){
       e.preventDefault();
       e.data.li.remove();
       if (e.data.self.options.tagremovecallback != null){
-        eval(e.data.self.options.tagremovecallback(e.data.tag, this));
+        e.data.self.options.tagremovecallback(e.data.tag, e.data.data, e.data.self);
       }
     });
     li.append(tag);
     this.taglist.append(li);
     if (this.options.tagaddcallback != null){
-      var tag = li.children('span').first();
-      eval(this.options.tagaddcallback(tag, this));
+      this.options.tagaddcallback(tag, data, this);
     }
   },
   reset: function(){
