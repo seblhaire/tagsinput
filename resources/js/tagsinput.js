@@ -49,7 +49,7 @@ var Tagsinput = {
       }
       self.dragelement.remove();
       if (self.options.tagaddcallback != null){
-        self.options.tagaddcallback(self.dragtag, self);
+        self.options.tagaddcallback(self.dragtag, self.dragtag.data('tagdata'), self);
       }
     },
     // fin du drag (même sans drop)
