@@ -13,6 +13,7 @@ return [
   'tagremovebtnclass' => 'fas fa-trash-alt',
   'helptextclass' => 'taginputhelper',
   'helptext' => '#tagsinput::messages.tagshelp#',
+  'hiddeninput' => true,
   'showaddbutton' => true,
   'addbuttoncallback' => null,
   'tagaddcallback' => null,

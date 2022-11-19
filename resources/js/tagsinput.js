@@ -48,6 +48,7 @@ var Tagsinput = {
           .insertAfter(jQuery(this));
       }
       self.dragelement.remove();
+      self.fillinput();
       if (self.options.tagaddcallback != null){
         self.options.tagaddcallback(self.dragtag, self.dragtag.data('tagdata'), self);
       }
@@ -114,12 +115,14 @@ var Tagsinput = {
     removelink.on('click', {li: li, data: data, self: this, tag: tag}, function(e){
       e.preventDefault();
       e.data.li.remove();
+      e.data.self.fillinput();
       if (e.data.self.options.tagremovecallback != null){
         e.data.self.options.tagremovecallback(e.data.tag, e.data.data, e.data.self);
       }
     });
     li.append(tag);
     this.taglist.append(li);
+    this.fillinput();
     if (this.options.tagaddcallback != null){
       this.options.tagaddcallback(tag, data, this);
     }
@@ -148,6 +151,11 @@ var Tagsinput = {
       res += jQuery(el).data('tagdata')[field];
     });
     return res;
+  },
+  fillinput: function(){
+    if (this.options.hiddeninput){
+      jQuery('#' + this.mainid + '-hidden').val(this.getCommaSepValues());
+    }
   },
   serialize: function(sChamp){
     var str ='';

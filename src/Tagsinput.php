@@ -32,6 +32,7 @@ class Tagsinput{
     $str .= $this->printLabel();
     $str .= $this->printAutocompleter();
     $str .= $this->printTagList();
+    $str .= $this->printHiddenInput();
     $str .= $this->printHelpText();
     $str .= '</div>' . PHP_EOL . '<script type="text/javascript">' . PHP_EOL;
     $str .= $this->printAcCallback();
@@ -41,6 +42,11 @@ class Tagsinput{
     return $str;
 	}
 
+  public function printHiddenInput(){
+    if ($this->options_tags['hiddeninput']){
+      return '<input type="hidden" id="' . $this->divid . '-hidden" name="' . $this->divid . '-list" value="" />'. PHP_EOL;
+    }
+  }
   public function printLabel(){
     $str = '  <div class="' . $this->options_tags['divlabelclass'] . '">' . PHP_EOL;
     $str .= $this->ac->printLabel();
@@ -99,7 +105,8 @@ class Tagsinput{
     $str .= '     tagclasselement : \'' . $this->options_tags['tagclasselement'] . '\',' . PHP_EOL;
     $str .= '     tagremovebtnclass : \'' . $this->options_tags['tagremovebtnclass'] . '\',' . PHP_EOL;
     $str .= '     tagaddcallback: ' . $this->options_tags['tagaddcallback'] . ',' . PHP_EOL;
-    $str .= '     tagremovecallback: ' . $this->options_tags['tagremovecallback'] . PHP_EOL;
+    $str .= '     tagremovecallback: ' . $this->options_tags['tagremovecallback'] . "," .PHP_EOL;
+    $str .= '     hiddeninput: ' . ($this->options_tags['hiddeninput'] ? 'true,': 'false,') . PHP_EOL;
     $str .= '   });' . PHP_EOL;
     return $str;
   }
