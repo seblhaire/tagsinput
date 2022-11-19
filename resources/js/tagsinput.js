@@ -154,7 +154,7 @@ var Tagsinput = {
   },
   fillinput: function(){
     if (this.options.hiddeninput){
-      jQuery('#' + this.mainid + '-hidden').val(this.getCommaSepValues());
+      jQuery('#' + this.mainid + '-result').val(this.getCommaSepValues());
     }
   },
   serialize: function(sChamp){

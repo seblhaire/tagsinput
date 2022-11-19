@@ -44,7 +44,7 @@ class Tagsinput{
 
   public function printHiddenInput(){
     if ($this->options_tags['hiddeninput']){
-      return '<input type="hidden" id="' . $this->divid . '-hidden" name="' . $this->divid . '-list" value="" />'. PHP_EOL;
+      return '<input type="hidden" id="' . $this->divid . '-result" name="' . $this->divid . '-result" value="" />'. PHP_EOL;
     }
   }
   public function printLabel(){

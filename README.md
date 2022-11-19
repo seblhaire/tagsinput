@@ -118,6 +118,7 @@ Inits a tagsinput object and an autocompleter object that can be passed to the v
     * `tagclasselement`: name of field in autocompleter results line that can be used to set a special tag class that is not the class by default. Default: `tagclass`.
    * `'field'`: name of field in result line containing data identifier or key. Default: `'id'.` See [seblhaire/autocompleter](https://github.com/seblhaire/autocompleter).
     * `'checkunicity'`: specify if value in tag list must be unique. If true, if same tag is selected twice, the second one is ignored and is not added to list. Default: `true`.
+    * `hiddeninput`: automatically insert hidden input. This input will contain  Tagsinput comma-separated results. Hidden input is named by Tagsinput object id followed by "-result".
 
 To summarize in your controller insert:
 ```
@@ -132,10 +133,7 @@ $tagszone = TagsinputHelper::init(
         ],
         'csrfrefreshroute' => route('refreshcsrf') // route called if csrf token must be reloaded
       ],
-      [
-        'tagaddcallback' => 'showlist', // callback functions called after tag is addded
-        'tagremovecallback' => 'showlist'
-      ]
+      [ /* tagslist options */ ]
     );
     ...
     return view('tagsinput', [
@@ -165,6 +163,8 @@ This method prnts help text zone.
 Prints autocompleter callback to add a new tag to list.
 #### printTagInputInit()
 Prints initialization of autocompleter and tagsinput objects. Better insert it in jQuery(document).ready clause.
+#### printHiddenInput()
+Prints hidden input to contain tagsinput comma-separated output.
 
 Following methods can be used to manage tags list and to send tags list to other scripts with different formats.
 #### printReset()
@@ -177,7 +177,7 @@ Returns current tags list size.
 Returns an array of tags list values. Eg:  ["CH","FR"]
 
 #### printGetCommaSepValues()
-Returns a string with tags list values separated by comma. Eg.: CH,FR
+Returns a string with tags list values separated by comma. Eg.: CH,FR. This list is automatically inserted in hidden input if `hiddeninput` value is `true`.
 
 #### printSerialize($champ)
 Returns serialized values that can be used in a Javascript string to send values to a controller.
