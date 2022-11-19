@@ -104,8 +104,12 @@ class Tagsinput{
     $str .= '     taglabelelement : \'' . $this->options_tags['taglabelelement'] . '\',' . PHP_EOL;
     $str .= '     tagclasselement : \'' . $this->options_tags['tagclasselement'] . '\',' . PHP_EOL;
     $str .= '     tagremovebtnclass : \'' . $this->options_tags['tagremovebtnclass'] . '\',' . PHP_EOL;
-    $str .= '     tagaddcallback: ' . $this->options_tags['tagaddcallback'] . ',' . PHP_EOL;
-    $str .= '     tagremovecallback: ' . $this->options_tags['tagremovecallback'] . "," .PHP_EOL;
+    if (!is_null($this->options_tags['tagaddcallback'])){
+      $str .= '     tagaddcallback: ' .$this->options_tags['tagaddcallback'] . ',' . PHP_EOL;
+    }
+    if (!is_null($this->options_tags['tagremovecallback'])){
+      $str .= '     tagremovecallback: ' . $this->options_tags['tagremovecallback'] . "," .PHP_EOL;
+    }
     $str .= '     hiddeninput: ' . ($this->options_tags['hiddeninput'] ? 'true,': 'false,') . PHP_EOL;
     $str .= '   });' . PHP_EOL;
     return $str;
