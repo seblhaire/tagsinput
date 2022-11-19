@@ -148,7 +148,7 @@ class Tagsinput{
   private function translateOrPrint($key)
   {
       if (preg_match('/^\#(.+)\#$/', $key, $matches)) {
-          return addslashes(__($matches[1]));
+          return __($matches[1]);
       }
       return $key;
   }
