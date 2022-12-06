@@ -131,7 +131,6 @@ $tagszone = TagsinputHelper::init(
           'width' => '430px',
           'top' => '-18px'
         ],
-        'csrfrefreshroute' => route('refreshcsrf') // route called if csrf token must be reloaded
       ],
       [ /* tagslist options */ ]
     );
