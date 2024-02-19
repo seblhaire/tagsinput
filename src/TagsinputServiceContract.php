@@ -1,7 +1,8 @@
-<?php namespace Seblhaire\Tagsinput;
+<?php
 
-interface TagsinputServiceContract{
+namespace Seblhaire\Tagsinput;
 
-	public function init($divid, $label, $url, $optionsAc = [], $optionsTags = []);
+interface TagsinputServiceContract {
 
+    public function init($divid, $label, $url, $optionsAc = [], $optionsTags = []);
 }
