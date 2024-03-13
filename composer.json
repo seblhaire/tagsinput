@@ -11,9 +11,9 @@
     "homepage": "https://github.com/seblhaire/tagsinput",
     "license": "MIT",
     "require": {
-        "php": ">=5.6",
-        "illuminate/http": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
-        "seblhaire/autocompleter": "^1.1|dev-feature/laravel11"
+        "php": ">=8.2",
+        "illuminate/http": "^11.0",
+        "seblhaire/autocompleter": "^1.5.0"
     },
     "autoload": {
         "psr-4": {
